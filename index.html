@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game of Thrones Quiz App</title>
+    <meta name="description" content="Test your Game of Thrones Knowledge!">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="datastore.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+      <header>
+          <div class = 'header'>
+              <img src="data:image/png;base64,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">
+          </div>
+          <div class="question counter">
+              <ul>
+                  <li> Question: <span class="questionNumber">0</span>/10</li>
+                    <li>Score: <span class="score">0</span></li>
+              </ul>
+          </div>
+          </header>
+  </body>
+
+    <html>
